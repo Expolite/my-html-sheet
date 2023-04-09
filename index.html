@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noted Guide for Web-Dev</title>
+
+    <!-- Favicon / Tab Icon -->
+    <link rel="icon" type="image/x-icon" href="assets/main_icon/code_colored.png">
+    <!-- Main CSS Style -->
+    <link rel="stylesheet" href="assets/css/maincss.css" />
+    <!-- Code Highlighter - Prism -->
+    <link rel="stylesheet" href="assets/code_color/prism.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <div class="main_title">
+        <h2>Noted Guide for Web Development</h2>
+    </div>
+
+    <!-- Table of Contents -->
+    <section class="table_contents">
+        <h3>Table of Contents</h3>
+        <br>
+        <br>
+        <table>
+            <tr>
+                <th>HTML & CSS Started</th>
+                <td class="dot_space"></td>
+                <td class="tbl_numbers">1</td>
+            </tr>
+        </table>
+    </section>
+
+    <!--
+    ==================================================================================================
+    =
+    =
+    = Section 1
+    =
+    =
+    ==================================================================================================
+    -->
+
+    <!-- Main-Contents -->
+    <section class="sections">
+        <h3>HTML & CSS Started</h3>
+
+        <p>
+            HTML first setup template. 
+        </p>
+        <br>
+        <!-- # Code... -->
+        <!-- CSS -->
+        <i>CSS</i>
+        <pre>
+            <code class="language-css">
+                <textarea>
+                    * {
+                        margin: 0px;
+                        padding: 0px;
+                        box-sizing: border-box;
+                        /* Default font use (optional) */
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    }
+                </textarea>
+            </code>
+        </pre>
+        <br>
+        <!-- HTML -->
+        <i>HTML</i>
+        <pre>
+            <code class="language-html">
+                <textarea>
+                    
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Document</title>
+                        <!-- Tab Icon -->
+                        <link rel="icon" type="image/x-icon" href="assets/main_icon/code_colored.png">
+                        <!-- CSS Style -->
+                        <link rel="stylesheet" href="css/sample.css" />
+                    </head>
+                    <body>
+                        
+                    </body>
+                    <footer>
+                        <!-- JavaScript -->
+                        <script type="text/javascript" src="js/sample.js"></script>
+                    </footer>
+                    </html>
+
+                </textarea>
+            </code>
+        </pre>
+    </section>
+
+    <!--
+    ==================================================================================================
+    =
+    =
+    = Section 2
+    =
+    =
+    ==================================================================================================
+    -->
+    <section class="sections">
+        <h3>CSS Notes</h3>
+
+        <!-- Example -->
+        <div style="border: 1px solid black; padding: 30px;">
+            <center>
+                <div id="css_box" style="border: 1px solid black; 
+                                         width: 200px; 
+                                         height: 100px;
+                                         box-shadow: 10px 10px;">
+                    <h1 style="margin-top: 40px;">CSS</h1>
+                </div>
+
+                <div id="css_box_2" style="border: 1px solid black; 
+                                         width: 200px; 
+                                         height: 100px;
+                                         box-shadow: 10px 10px 5px blue">
+                    <h1 style="margin-top: 40px;">CSS</h1>
+                </div>
+
+                <div id="css_box_3" style="border: 1px solid black; 
+                                           width: 200px; 
+                                           height: 100px;
+                                           box-shadow: 10px 10px 5px 12px blue;">
+                    <h1 style="margin-top: 40px;">CSS</h1>
+                </div>
+            </center>
+        </div>
+        <small>Just refresh to reset.</small>
+
+        <!-- Buttons -->
+        <div class="btn_grp_options">
+            <button type="button" id="boxShadow_btn_1" onclick="boxShadow_btn_a()">
+                box-shadow: 10px 10px blue;
+            </button>
+
+            <button type="button" id="boxShadow_btn_2" onclick="boxShadow_btn_b()">
+                box-shadow: 10px 10px 5px lightblue;
+            </button>
+
+            <button type="button" id="boxShadow_btn_3" onclick="boxShadow_btn_c()">
+                box-shadow: 10px 10px 5px 12px lightblue;
+            </button>
+
+            <button type="button" id="boxShadow_btn_4" onclick="boxShadow_btn_d()">
+                <b>inset</b> (ex. box-shadow: 10px 10px inset;)
+            </button>
+        </div>
+
+        <br>
+        <br>
+
+        <style>
+            #box_shadow_wColor {
+                display: none;
+            }
+            #box_shadow_wBlurColor {
+                display: none;
+            }
+            #css_box_2 {
+                display: none;
+            }
+            #box_shadow_wSpreadRadius {
+                display: none;
+            }
+            #css_box_3 {
+                display: none;
+            }
+        </style>
+        
+        <!--
+            ==========================================================================================
+            =
+            = CSS Box-Shadow
+            =
+            ==========================================================================================
+        -->
+        <!-- Codes -->
+        <i>CSS Box-Shadow</i>
+        <pre id="box_shadow_default">
+            <code class="language-css">
+                <textarea>
+                        .class_name {
+                            /* Horizontal   Vertical*/
+                            box-shadow: 10px 10px;
+                        }
+                </textarea>
+            </code>
+        </pre>
+
+        <br>
+        <hr>
+
+        <pre id="box_shadow_wColor">
+            <code class="language-css">
+                <textarea>
+                    .class_name {
+                        /* Horizontal   Vertical  Color*/
+                        box-shadow: 10px 10px blue;
+                    }
+                </textarea>
+            </code>
+        </pre>
+
+        <pre id="box_shadow_wBlurColor">
+            <code class="language-css">
+                <textarea>
+                    .class_name {
+                        /* Horizontal   Vertical    Blur  Color*/
+                        box-shadow: 10px 10px 5px blue;
+                    }
+                </textarea>
+            </code>
+        </pre>
+
+        <pre id="box_shadow_wSpreadRadius">
+            <code class="language-css">
+                <textarea>
+                    .class_name {
+                        /* Horizontal   Vertical    Blur    Radius  Color*/
+                        box-shadow: 10px 10px 5px 12px blue;
+                    }
+                </textarea>
+            </code>
+        </pre>
+
+        <br>    
+
+        <!-- Example -->
+        <div align="center" style="border: 1px solid black; padding: 20px;">
+            <div style="width: fit-content;
+                        padding: 10px;
+                        display: flex;">
+
+                <div style="border: 1px solid black; 
+                            width: 200px; 
+                            height: 100px; 
+                            padding-top: 37px; 
+                            box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+                            margin-right: 30px;">
+                    <h1>CSS 1</h1>
+                </div>
+
+                <div style="border: 1px solid black; 
+                            width: 200px; 
+                            height: 100px; 
+                            padding-top: 37px; 
+                            box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;">
+                    <h1>CSS 2</h1>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <!--
+            ==========================================================================================
+            =
+            = Multiple Shadow
+            =
+            ==========================================================================================
+        -->
+        <hr>
+        <br>
+        <br>
+
+        <i>Multiple Shadow</i>
+
+        <!-- Example -->
+        <div>
+            <pre>
+                <code class="language-css">
+                    <textarea>
+                        .css_1 {
+                            /* {Horizontal Vertical Color}      {Horizontal Vertical Color}     {Horizontal Vertical Color} */
+                            box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+                        }
+                    </textarea>
+                </code>
+            </pre>
+        </div>
+        <div>
+            <pre>
+                <code class="language-css">
+                    <textarea>
+                        .css_2 {
+                            /* {Horizontal Vertical Blur Color}     {Horizontal Vertical Blur Color}    {Horizontal Vertical Blur Color} */
+                            box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+                        }
+                    </textarea>
+                </code>
+            </pre>
+        </div>
+
+        <!--
+            ==========================================================================================
+            =
+            = Card Shadow
+            =
+            ==========================================================================================
+        -->
+        <br>
+        <hr>
+
+        <br>
+        <br>
+
+        <i>Cards shadow</i>
+        <br>
+        <br>
+
+        <!-- Example -->
+        <div align="center" style="border: 1px solid black; padding: 20px;">
+            <div style="width: 200px;
+                        height: 100px;
+                        padding-top: 40px;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <h1>CSS</h1>
+            </div>
+        </div>
+        <pre>
+            <code class="language-css">
+                <textarea>
+                    .css_card {
+                        /* Horinzontal Vertical Blur Radius Color(rgba()),      Horinzontal Vertical Blur Radius Color(rgba()) */
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    }
+                </textarea>
+            </code>
+        </pre>
+        <br>
+        <hr>
+
+        <br>
+        <br>
+
+        <!--
+            ==========================================================================================
+            =
+            = Transition
+            =
+            ==========================================================================================
+        -->
+
+        <i>Transition</i>
+
+        <style>
+            .css_transition_tbl th {
+                text-align: left;
+            }
+            .css_transition_tbl th, td {
+                border-bottom: 1px solid grey;
+                padding: 5px;
+            }
+        </style>
+
+        <br>
+        <br>
+
+        <p>
+            <table class="css_transition_tbl">
+                <tr>
+                    <td><b style="color: blue;">property</b> (ex. width, height, color, padding, etc).</td>
+                </tr>
+                <tr>
+                    <th style="color: blue;">timing-function:</th>
+                </tr>
+                <tr>
+                    <th>ease</th>
+                    <td> - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</td>
+                </tr>
+                <tr>
+                    <th>linear</th>
+                    <td> - specifies a transition effect with the same speed from start to end</td>
+                </tr>
+                <tr>
+                    <th>ease-in</th>
+                    <td> - specifies a transition effect with a slow start</td>
+                </tr>
+                <tr>
+                    <th>ease-out</th>
+                    <td> - specifies a transition effect with a slow end</td>
+                </tr>
+                <tr>
+                    <th>cubic-bezier(n,n,n,n)</th>
+                    <td> - lets you define your own values in a cubic-bezier function</td>
+                </tr>
+            </table>
+        </p>
+
+        <br>
+
+        <style>
+            .css_hover_a {
+                border: 1px solid black; 
+                padding-top: 5px; 
+                padding-left: 10px; 
+                width: 200px; 
+                height: 40px;
+                background-color: #19A7CE;
+            }
+            .css_hover_a:hover {
+                width: 400px; 
+            }
+
+            /* transition property */
+            .trans_ease {
+                transition: all .5s ease;
+            }
+            .trans_linear {
+                transition: all .5s linear;
+            }
+            .trans_ease-in {
+                transition: all .5s ease-in;
+            }
+            .trans_ease-out {
+                transition: all .5s ease-out;
+            }
+        </style>
+        <div align="left" style="border: 1px solid black; padding: 10px;">
+            <!-- ease -->
+            <div class="css_hover_a trans_ease">
+                <h1>ease</h1>
+            </div>
+            <!-- linear -->
+            <div class="css_hover_a trans_linear">
+                <h1>linear</h1>
+            </div>
+            <!-- ease-in -->
+            <div class="css_hover_a trans_ease-in">
+                <h1>ease-in</h1>
+            </div>
+            <!-- ease-out -->
+            <div class="css_hover_a trans_ease-out">
+                <h1>ease-out</h1>
+            </div>
+        </div>
+
+        <pre>
+            <code class="language-css">
+                <textarea>
+                    .ease_example {
+                        /* propetry    duration(seconds)    timing-function */
+                        transition: all .5s ease;
+                    }
+                    .linear_example {
+                        /* propetry    duration(seconds)    timing-function */
+                        transition: all .5s linear;
+                    }
+                    .ease-in_example {
+                        /* propetry    duration(seconds)    timing-function */
+                        transition: all .5s ease-in;
+                    }
+                    .ease-out_example {
+                        /* propetry    duration(seconds)    timing-function */
+                        transition: all .5s ease-out;
+                    }
+
+                    /* other example */
+                    #delay {
+                        font-size: 14px;
+                        transition-property: font-size;
+                        transition-duration: 4s;
+                        transition-delay: 2s;
+                    }
+                    #delay:hover {
+                        font-size: 36px;
+                    }
+                </textarea>
+            </code>
+        </pre>
+
+
+        <!--
+            ==========================================================================================
+            =
+            = Accept 4-digit number
+            =
+            ==========================================================================================
+        -->
+        <br>
+        <hr>
+
+        <br>
+        <br>
+
+        <i>Limit text width</i>
+
+        <br>
+        <br>
+
+        <style>
+            .txt_limit {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 300px;
+            }
+        </style>
+        <div style="border: 1px solid black; padding: 10px;">
+            <div class="txt_limit" style="border: 1px solid black; padding: 5px;">
+                A sample refers to a smaller, manageable version of a larger group. It is a subset containing the characteristics of a larger population. Samples are used in statistical testing when population sizes are too large for the test to include all possible members or observations.
+            </div>
+        </div>
+
+        <br>
+
+        <pre>
+            <code class="language-css">
+                <textarea>
+                    .txt_limit {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 300px;
+                    }
+                </textarea>
+            </code>
+        </pre>
+
+        <br>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <!--
+            ==========================================================================================
+            =
+            = Limit text in two lines
+            =
+            ==========================================================================================
+        -->
+
+        <i>Limit text in two lines</i>
+
+        <br>
+        <br>
+
+        <style>
+            .limit_txt_2_lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; /* number of lines to show */ 
+                        line-clamp: 2; 
+                -webkit-box-orient: vertical;
+            }
+        </style>
+        <div style="border: 1px solid black; padding: 10px;">
+            <div class="limit_txt_2_lines" style="border: 1px solid black; width: 500px;">
+                A sample refers to a smaller, manageable version of a larger group. It is a subset containing the characteristics of a larger population. Samples are used in statistical testing when population sizes are too large for the test to include all possible members or observations.
+            </div>
+        </div>
+
+        <pre>
+            <code class="language-css">
+                <textarea>
+                    .example {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2; /* number of lines to show */ 
+                               line-clamp: 2; 
+                        -webkit-box-orient: vertical;
+                    }
+                </textarea>
+            </code>
+        </pre>
+
+        <br>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <!--
+            ==========================================================================================
+            =
+            = Remove Outline from input
+            =
+            ==========================================================================================
+        -->
+
+
+        <i>Remove Outline from input</i>
+
+        <br>
+        <br>
+
+        <div style="border: 1px solid black; padding: 10px;">
+            <label for="#">with Outline</label> <br>
+            <input type="text" style="padding: 5px;" placeholder="Try click here">
+            <br>
+            <br>
+            <label for="#">without Outline</label> <br>
+            <input type="text" style="padding: 5px; outline: none;" placeholder="Try click here">
+        </div>
+
+        <pre>
+            <code class="language-css">
+                <textarea> 
+                    .input_sample {
+                        outline: none;
+                    }
+                </textarea>
+            </code>
+        </pre>
+
+        <br>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <!--
+            ==========================================================================================
+            =
+            = HTML spacing
+            =
+            ==========================================================================================
+        -->
+
+        <i>HTML spacing</i>
+
+        <br>
+        <br>
+
+        <div style="border: 1px solid black; padding: 10px;">
+            Normal Spacing
+            <div style="border: 1px solid black; padding: 5px; margin-top: 5px;">
+                Hello World
+            </div>
+            <br>
+
+            using single html space <b>(& nbsp ;)</b>
+            <div style="border: 1px solid black; padding: 5px; margin-top: 5px;">
+                Hello&nbsp;World
+            </div>
+            <br>
+
+            using wide space <b>($ emsp ;)</b>
+            <div style="border: 1px solid black; padding: 5px; margin-top: 5px;">
+                Hello&emsp;World
+            </div>
+        </div>
+
+        <br>
+
+        <img src="img/code_ss/SS_html_spacing.png" alt="HTML image code sample" style="border-radius: .3rem;">
+
+        <br>
+        <br>
+
+        <hr>
+
+        <br>
+
+        <i>Table Collapse</i>
+
+        <br>
+        <br>
+
+        <p>
+            The <span style="color: red;">border-collapse</span> property sets whether the table borders should be collapsed into a single border:
+        </p>
+
+        <br>
+
+        <style>
+            .no_collapse_tbl th, td {
+                border: 1px solid black;
+                padding: 5px;
+                text-align: center;
+            }
+            .collapse_tbl {
+                border-collapse: collapse;
+            }
+            .collapse_tbl th, td {
+                border: 1px solid black;
+                padding: 5px;
+                text-align: center;
+            }
+        </style>
+        <div align="center" style="border: 1px solid black; display: flex; padding-top: 20px; padding-bottom: 20px; padding-left: 20px;">
+            <!-- Table without Collapse -->
+            <table class="no_collapse_tbl" style="padding-right: 10px;">
+                <tr>
+                    <th colspan="3">Table not Collapse</th>
+                </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Neru Tokisaki</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Kuroma Kuro</td>
+                    <td>21</td>
+                </tr>
+            </table>
+
+            <!-- Table without Collapse -->
+            <table class="collapse_tbl">
+                <tr>
+                    <th colspan="3">Table Collapse</th>
+                </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Neru Tokisaki</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Kuroma Kuro</td>
+                    <td>21</td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+        <pre>
+            <code class="language-css">
+                <textarea>
+                    /* No Collapse */
+                    .no_collapse_tbl th, td {
+                        border: 1px solid black;
+                        padding: 5px;
+                        text-align: center;
+                    }
+
+
+                    /* With Collapse */
+                    .collapse_tbl {
+                        border-collapse: collapse;  /* This is Collapse */
+                    }
+                    .collapse_tbl th, td {
+                        border: 1px solid black;
+                        padding: 5px;
+                        text-align: center;
+                    }
+                </textarea>
+            </code>
+        </pre>
+        <br>
+        <hr>
+        <br>
+
+        <i>Transparent Background using RGBA</i>
+        <br>
+        <br>
+        <style>
+            .box_transparent_box {
+                height: 100px; 
+                width: fit-content; 
+                padding-top: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .transparent_default {
+                background: rgb(76, 175, 80);
+            }
+            .transparent_1 {
+                background: rgba(76, 175, 80, 0.6);
+            }
+            .transparent_2 {
+                background: rgba(76, 175, 80, 0.3);
+            }
+            .transparent_3 {
+                background: rgba(76, 175, 80, 0.1);
+            }
+        </style>
+        <div style="border: 1px solid black; padding: 20px; display: flex;">
+            <div class="box_transparent_box transparent_default">
+                Transparent <br>Background <br>default
+            </div>
+            <div class="box_transparent_box transparent_1">
+                Transparent <br>Background <br>1
+            </div>
+            <div class="box_transparent_box transparent_2">
+                Transparent <br>Background <br>2
+            </div>
+            <div class="box_transparent_box transparent_3">
+                Transparent <br>Background <br>3
+            </div>
+        </div>
+
+        <br>
+
+        <pre>
+            <code class="language-css">
+                <textarea>
+                    .default {
+                        background: rgb(76, 175, 80);
+                    }
+                    .transparent_1 {
+                        background: rgba(76, 175, 80, 0.6);
+                    }
+                    .transparent_2 {
+                        background: rgba(76, 175, 80, 0.3);
+                    }
+                    .transparent_3 {
+                        background: rgba(76, 175, 80, 0.1);
+                    }
+                </textarea>
+            </code>
+        </pre>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+</body>
+<footer>
+    <!-- Code Highlighter - Prism -->
+    <script src="assets/code_color/prism.js"></script>
+
+
+    <!-- Your Script -->
+    <script>
+        // CSS Notes
+        function boxShadow_btn_a() {
+            css_box.style.display = "block";                // display own css-box
+            css_box_2.style.display = "none";               // hide other css-box
+            css_box_3.style.display = "none";              // hide other css-box
+
+            css_box.style.boxShadow = '10px 10px blue';
+
+            box_shadow_default.style.display = 'none';          // hide default code
+            box_shadow_wColor.style.display = 'block';          // display code 1
+            box_shadow_wBlurColor.style.display = 'none';       // hide code 2
+            box_shadow_wSpreadRadius.style.display = 'none';    // hide code 3
+
+
+            // Highlight this btn
+            boxShadow_btn_1.style.backgroundColor = 'black'; 
+            boxShadow_btn_1.style.color = 'white';
+
+            // remove Highlights from other buttons
+            boxShadow_btn_2.style.backgroundColor = 'white'; 
+            boxShadow_btn_2.style.color = 'black';
+
+            boxShadow_btn_3.style.backgroundColor = 'white'; 
+            boxShadow_btn_3.style.color = 'black';
+
+            boxShadow_btn_4.style.backgroundColor = "white";
+            boxShadow_btn_4.style.color = "black";
+
+            boxShadow_btn_4.style.backgroundColor = "white";
+            boxShadow_btn_4.style.color = "black";
+        }
+
+        function boxShadow_btn_b() {
+            css_box.style.display = "none";                 // hide other css-box
+            css_box_2.style.display = "block";              // display own css-box
+            css_box_3.style.display = "none";               // hide other css-box
+
+            box_shadow_default.style.display = 'none';          // hide default code
+            box_shadow_wColor.style.display = 'none';           // hide code 1
+            box_shadow_wBlurColor.style.display = 'block';      // display code 2
+            box_shadow_wSpreadRadius.style.display = 'none';    // hide code 3
+
+            // Highlight this btn
+            boxShadow_btn_2.style.backgroundColor = 'black'; 
+            boxShadow_btn_2.style.color = 'white';
+
+            // remove Highlights from other buttons
+            boxShadow_btn_1.style.backgroundColor = 'white'; 
+            boxShadow_btn_1.style.color = 'black';
+
+            boxShadow_btn_3.style.backgroundColor = 'white'; 
+            boxShadow_btn_3.style.color = 'black';
+
+            boxShadow_btn_4.style.backgroundColor = "white";
+            boxShadow_btn_4.style.color = "black";
+        }
+
+        function boxShadow_btn_c() {
+            css_box.style.display = "none";                 // hide other css-box
+            css_box_2.style.display = "none";               // hide own css-box
+            css_box_3.style.display = "block";              // display own css-box
+
+            box_shadow_default.style.display = 'none';          // hide default code
+            box_shadow_wColor.style.display = 'none';           // hide code 1
+            box_shadow_wBlurColor.style.display = 'none';       // hide code 2
+            box_shadow_wSpreadRadius.style.display = 'block';   // display code 3
+
+            // Highlight this btn
+            boxShadow_btn_3.style.backgroundColor = 'black'; 
+            boxShadow_btn_3.style.color = 'white';
+
+            // remove Highlights from other buttons
+            boxShadow_btn_1.style.backgroundColor = 'white'; 
+            boxShadow_btn_1.style.color = 'black';
+
+            boxShadow_btn_2.style.backgroundColor = 'white'; 
+            boxShadow_btn_2.style.color = 'black';
+
+            boxShadow_btn_4.style.backgroundColor = "white";
+            boxShadow_btn_4.style.color = "black";
+        }
+
+        function boxShadow_btn_d() {
+            // set to 'inset'
+            css_box.style.boxShadow = '10px 10px blue inset';
+            css_box_2.style.boxShadow = '10px 10px 5px blue inset';
+            css_box_3.style.boxShadow = '10px 10px 5px 12px blue inset';
+
+            // this button style
+            boxShadow_btn_4.style.backgroundColor = "black";
+            boxShadow_btn_4.style.color = "white";
+
+            // remove highlights
+            boxShadow_btn_5.style.backgroundColor = "white";
+            boxShadow_btn_5.style.color = "black";
+        }
+    </script>
+</footer>
+</html>
